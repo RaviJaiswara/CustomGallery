@@ -29,6 +29,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -267,6 +268,7 @@ public class MultiImageSelectorFragment extends Fragment implements FolderOnItem
                         // mCallback.onCameraShot(mTmpFile);
 
                         if (selectMode() == MODE_MULTI) {
+                            Log.d("imageCamera", mTmpFile.getAbsolutePath());
                             getActivity().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(mTmpFile)));
 
                             if (selectImageCount() <= resultList.size()) {

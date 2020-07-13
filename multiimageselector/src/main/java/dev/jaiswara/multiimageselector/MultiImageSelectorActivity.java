@@ -16,6 +16,9 @@ import android.widget.Button;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Created by Ravi Jaiswara emp id: 1208 on 13-07-2020
+ */
 public class MultiImageSelectorActivity extends AppCompatActivity implements MultiImageSelectorFragment.Callback {
 
     // Single choice
